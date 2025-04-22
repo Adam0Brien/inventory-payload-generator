@@ -3,20 +3,20 @@
     "resourceType": "host",
     "reporterData": {
       "reporterType": "HBI",
-      "reporterInstanceId": "41c2424b-aad9-4b43-a52c-9abba5e12da3",
-      "reporterVersion": "3.4.18",
-      "localResourceId": "6a119e1f-9f3b-4542-be60-c8a2f05275c1",
-      "apiHref": "https://www.greene.org/",
-      "consoleHref": "https://thomas.com/",
+      "reporterInstanceId": "3285c1d1-2bfd-4331-a799-2010ba26f380",
+      "reporterVersion": "1.9.3",
+      "localResourceId": "0fef3011-cfd6-438d-a5e6-68ebff469a91",
+      "apiHref": "https://www.mccarthy-sullivan.com/",
+      "consoleHref": "https://davis.com/",
       "resourceData": {
-        "satellite_id": "231755a4-1ae9-419e-905b-d3a73138a42f",
-        "sub_manager_id": "33ce6023-164f-41c7-81a8-0906272e9efe",
-        "insights_inventory_id": "4e3f4b71-f764-423e-8aed-19ad10967824",
-        "ansible_host": "agreement"
+        "satellite_id": "e0102502-dc44-4abe-bda8-c5359ae50bd9",
+        "sub_manager_id": "e77fb2ba-8e91-4b63-b033-5440ca12ca2e",
+        "insights_inventory_id": "00065628-e35c-48f2-a52e-af52e2da5da3",
+        "ansible_host": "must"
       }
     },
     "commonResourceData": {
-      "workspace_id": "4e7bd344-ddff-47ca-be98-f0634f22fd81"
+      "workspace_id": "c797ae62-4667-4693-b81e-408ca348fdb5"
     }
   }
 }
