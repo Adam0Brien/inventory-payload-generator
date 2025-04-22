@@ -170,12 +170,12 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter
     )
 
-    method_group = parser.add_mutually_exclusive_group(required=True)
+    method_group = parser.add_mutually_exclusive_group(required=False)
     method_group.add_argument("--post", help="POST the payload to the given endpoint")
     method_group.add_argument("--delete", help="DELETE the payload to the given endpoint")
 
     parser.add_argument("--resource", help="Resource type (required for POST)")
-    parser.add_argument("--reporter", help="Reporter type (required for both)")
+    parser.add_argument("--reporter", help="Reporter type (required for POST and DELETE)")
     parser.add_argument("--inventory-id", help="Optional inventory ID to include in payload")
     parser.add_argument("--local-resource-id", help="Local resource ID (required for DELETE)")
     parser.add_argument("--quiet", action="store_true", help="Suppress logging output")
@@ -185,52 +185,67 @@ def main():
 
     # Logging config
     LOGGING_ENABLED = not args.quiet
-    if not LOGGING_ENABLED:
-        print("Logging disabled via --quiet")
-    else:
+    if LOGGING_ENABLED:
         print("Logging enabled")
+    else:
+        print("Logging disabled via --quiet")
 
-    # Inventory ID for injection
-    INVENTORY_ID = args.inventory_id
+    # Determine method and endpoint
+    method = None
+    endpoint = None
+    if args.post:
+        method = "post"
+        endpoint = args.post
+    elif args.delete:
+        method = "delete"
+        endpoint = args.delete
 
-    # Determine method
-    method = "post" if args.post else "delete"
-    endpoint = args.post or args.delete
-
-    log("Parsed arguments:")
-    log(vars(args))
-
+    # Validation
     if method == "post":
         if not args.resource or not args.reporter:
             parser.error("--resource and --reporter are required with --post")
     elif method == "delete":
         if not args.reporter or not args.local_resource_id:
             parser.error("--reporter and --local-resource-id are required with --delete")
+    elif not args.output:
+        parser.error("Must provide either --post, --delete, or --output")
+
+    # Inventory ID for injection
+    INVENTORY_ID = args.inventory_id
+
+    log("Parsed arguments:")
+    log(vars(args))
 
     log("Starting payload inference...")
     openapi = load_openapi_spec()
 
     if method == "post":
         payload = generate_report_resource_payload(openapi, args.resource, args.reporter)
-    else:
+    elif method == "delete":
         payload = {
             "localResourceId": args.local_resource_id,
             "reporterType": args.reporter
         }
+    else:
+        # Generate payload without sending
+        if not args.resource or not args.reporter:
+            parser.error("--resource and --reporter are required when not using --post or --delete")
+        payload = generate_report_resource_payload(openapi, args.resource, args.reporter)
 
     print("Final Payload:")
     print(json.dumps(payload, indent=2))
 
-    send_request(endpoint, payload, method=method)
+    if endpoint:
+        send_request(endpoint, payload, method=method)
 
     if args.output:
         log(f"Writing payload to {args.output}")
-    try:
-        with open(args.output, "w") as f:
-            json.dump(payload, f, indent=2)
-        log("Payload written successfully.")
-    except Exception as e:
-        print(f"Failed to write payload to file: {e}")
+        try:
+            with open(args.output, "w") as f:
+                json.dump(payload, f, indent=2)
+            log("Payload written successfully.")
+        except Exception as e:
+            print(f"Failed to write payload to file: {e}")
 
 if __name__ == "__main__":
     main()

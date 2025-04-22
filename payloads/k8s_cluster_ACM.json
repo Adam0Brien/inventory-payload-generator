@@ -3,30 +3,30 @@
     "resourceType": "k8s_cluster",
     "reporterData": {
       "reporterType": "ACM",
-      "reporterInstanceId": "50180aa6-fec6-4430-a397-658d03be49e3",
-      "reporterVersion": "1.2.4",
-      "localResourceId": "d234e0f3-9b36-494f-a5e8-7b38b7443f89",
-      "apiHref": "https://www.nelson.org/",
-      "consoleHref": "http://baker.org/",
+      "reporterInstanceId": "4dcc2c9a-da8f-406d-b92f-c7e400c024a4",
+      "reporterVersion": "0.3.2",
+      "localResourceId": "8292df36-ce36-4a08-b7a4-d525da2b1f1f",
+      "apiHref": "http://torres.com/",
+      "consoleHref": "https://butler.com/",
       "resourceData": {
-        "external_cluster_id": "4821ba12-518f-4f16-99f2-a8033fae2dac",
-        "cluster_status": "CLUSTER_STATUS_OTHER",
-        "cluster_reason": "area",
-        "kube_version": "2.0.17",
-        "kube_vendor": "AKS",
-        "vendor_version": "3.3.6",
-        "cloud_platform": "KUBEVIRT_IPI",
+        "external_cluster_id": "c4b6107d-8f21-4707-940c-2b82a9fbbbe3",
+        "cluster_status": "READY",
+        "cluster_reason": "near",
+        "kube_version": "1.5.16",
+        "kube_vendor": "EKS",
+        "vendor_version": "3.3.3",
+        "cloud_platform": "IBMCLOUD_UPI",
         "nodes": [
           {
-            "name": "wonder",
-            "cpu": "or",
-            "memory": "interesting"
+            "name": "defense",
+            "cpu": "both",
+            "memory": "safe"
           }
         ]
       }
     },
     "commonResourceData": {
-      "workspace_id": "4b34a7fc-eb1e-488c-8c40-49d8a9bfddb1"
+      "workspace_id": "3fe5f05d-a8b6-4e28-aa25-00a90c450a04"
     }
   }
 }
