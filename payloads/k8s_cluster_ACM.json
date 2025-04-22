@@ -1,0 +1,32 @@
+{
+  "resource": {
+    "resourceType": "k8s_cluster",
+    "reporterData": {
+      "reporterType": "ACM",
+      "reporterInstanceId": "50180aa6-fec6-4430-a397-658d03be49e3",
+      "reporterVersion": "1.2.4",
+      "localResourceId": "d234e0f3-9b36-494f-a5e8-7b38b7443f89",
+      "apiHref": "https://www.nelson.org/",
+      "consoleHref": "http://baker.org/",
+      "resourceData": {
+        "external_cluster_id": "4821ba12-518f-4f16-99f2-a8033fae2dac",
+        "cluster_status": "CLUSTER_STATUS_OTHER",
+        "cluster_reason": "area",
+        "kube_version": "2.0.17",
+        "kube_vendor": "AKS",
+        "vendor_version": "3.3.6",
+        "cloud_platform": "KUBEVIRT_IPI",
+        "nodes": [
+          {
+            "name": "wonder",
+            "cpu": "or",
+            "memory": "interesting"
+          }
+        ]
+      }
+    },
+    "commonResourceData": {
+      "workspace_id": "4b34a7fc-eb1e-488c-8c40-49d8a9bfddb1"
+    }
+  }
+}

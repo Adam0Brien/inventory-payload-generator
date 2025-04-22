@@ -1,0 +1,32 @@
+{
+  "resource": {
+    "resourceType": "k8s_cluster",
+    "reporterData": {
+      "reporterType": "OCM",
+      "reporterInstanceId": "ef0b7480-d48a-47b5-9f56-2976138edaba",
+      "reporterVersion": "2.5.13",
+      "localResourceId": "45b06c13-8389-40b7-a399-f47a0a0f2b7f",
+      "apiHref": "http://lloyd.org/",
+      "consoleHref": "https://www.olson-klein.biz/",
+      "resourceData": {
+        "external_cluster_id": "b4240e73-9bf1-4db5-9714-d4abffb34fc6",
+        "cluster_status": "OFFLINE",
+        "cluster_reason": "their",
+        "kube_version": "0.3.20",
+        "kube_vendor": "EKS",
+        "vendor_version": "3.6.5",
+        "cloud_platform": "GCP_IPI",
+        "nodes": [
+          {
+            "name": "sit",
+            "cpu": "war",
+            "memory": "sing"
+          }
+        ]
+      }
+    },
+    "commonResourceData": {
+      "workspace_id": "8c8ed02f-6506-4436-9ecf-77daa55ca7a4"
+    }
+  }
+}

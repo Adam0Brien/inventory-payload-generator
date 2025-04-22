@@ -1,0 +1,22 @@
+{
+  "resource": {
+    "resourceType": "host",
+    "reporterData": {
+      "reporterType": "HBI",
+      "reporterInstanceId": "5a52afd4-0840-48b1-8927-e76fc75b33be",
+      "reporterVersion": "1.4.1",
+      "localResourceId": "6877ea24-ac90-406c-aa4f-10fcb6b4f652",
+      "apiHref": "https://www.yates.biz/",
+      "consoleHref": "http://ramirez.net/",
+      "resourceData": {
+        "satellite_id": "fcefeb5c-fb69-40ae-bbe1-3d103dd74434",
+        "sub_manager_id": "ca3ab62a-9eda-422e-84ed-c250d9ed1a44",
+        "insights_inventory_id": "44fc5914-8832-42bc-8b68-5d2a4ee183ea",
+        "ansible_host": "court"
+      }
+    },
+    "commonResourceData": {
+      "workspace_id": "5a0f9b26-a531-4e6c-a202-024c0cc78d70"
+    }
+  }
+}
