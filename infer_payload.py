@@ -93,10 +93,10 @@ def generate_value(schema, path=None):
         obj = {}
         for k, v in props.items():
             new_path = path + [k]
-            if k == "commonResourceData":
+            if k == "commonResourceData": ## TODO change later
                 log(f"Injecting common schema into {'.'.join(new_path)}")
                 obj[k] = generate_value(common_schema, new_path)
-            elif k == "resourceData":
+            elif k == "resourceData": ## TODO change later
                 log(f"Injecting reporter schema into {'.'.join(new_path)}")
                 reporter_data = generate_value(reporter_schema, new_path)
                 obj[k] = reporter_data

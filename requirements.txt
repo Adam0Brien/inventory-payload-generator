@@ -1,5 +1,3 @@
 PyYAML
-hypothesis
-hypothesis-jsonschema
 jsonref
 Faker
