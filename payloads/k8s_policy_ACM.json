@@ -1,20 +1,22 @@
 {
   "resource": {
     "resourceType": "k8s_policy",
-    "reporterData": {
-      "reporterType": "ACM",
-      "reporterInstanceId": "038fee84-2b84-4e13-9656-b021dd3f556a",
-      "reporterVersion": "3.0.15",
-      "localResourceId": "8ac275d8-e80f-4e74-9d53-9199981dd7d1",
-      "apiHref": "http://www.brown.com/",
-      "consoleHref": "http://www.carter.com/",
-      "resourceData": {
+    "reporterType": "ACM",
+    "reporterInstanceId": "0da2060f-4d75-4b88-902c-b2093a62af2f",
+    "resourceRepresentation": {
+      "representationMetadata": {
+        "localResourceId": "41b41c09-fe1f-4773-a7fd-0ed31e781eb9",
+        "apiHref": "http://roberts-jenkins.info/",
+        "consoleHref": "http://smith.org/",
+        "reporterVersion": "0.8.0"
+      },
+      "common": {
+        "workspace_id": "79f481a0-8c47-49fa-bcad-c08713aa8dd3"
+      },
+      "reporter": {
         "disabled": true,
-        "severity": "MEDIUM"
+        "severity": "HIGH"
       }
-    },
-    "commonResourceData": {
-      "workspace_id": "9a0c5e5a-edea-4cf9-9b5c-ffea0067be82"
     }
   }
 }

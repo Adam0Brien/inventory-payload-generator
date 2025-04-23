@@ -1,21 +1,23 @@
 {
   "resource": {
     "resourceType": "notifications_integration",
-    "reporterData": {
-      "reporterType": "NOTIFICATIONS",
-      "reporterInstanceId": "3ac5f0e1-9618-414b-8fac-7c0c757d9b88",
-      "reporterVersion": "3.7.9",
-      "localResourceId": "aa78bc32-b5d1-4621-b032-bd33f2f37fc6",
-      "apiHref": "https://griffin-hill.info/",
-      "consoleHref": "https://wiggins-montes.info/",
-      "resourceData": {
+    "reporterType": "NOTIFICATIONS",
+    "reporterInstanceId": "08bc5e31-8b1f-4632-bf90-e959c4d4f55d",
+    "resourceRepresentation": {
+      "representationMetadata": {
+        "localResourceId": "1a1bac00-7207-4cef-9863-359e64a8a1f6",
+        "apiHref": "https://marshall.com/",
+        "consoleHref": "http://buchanan-ramirez.com/",
+        "reporterVersion": "3.0.11"
+      },
+      "common": {
+        "workspace_id": "5587e0d7-c038-41a7-b16c-b237c9cba93f"
+      },
+      "reporter": {
         "reporter_type": "NOTIFICATIONS",
-        "reporter_instance_id": "5b5f8923-134e-4987-a7d3-40ecb8a99daf",
-        "local_resource_id": "dbb8ed08-1da8-41b8-889d-d75340ce47e9"
+        "reporter_instance_id": "51c02678-c53e-4bf3-bd8f-d736bdccdd67",
+        "local_resource_id": "ec8f8ece-8521-46cf-b58b-cf014c9109d9"
       }
-    },
-    "commonResourceData": {
-      "workspace_id": "f4d1ac95-76a4-49c6-b679-ca8a71defd96"
     }
   }
 }

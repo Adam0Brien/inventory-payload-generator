@@ -1,22 +1,24 @@
 {
   "resource": {
     "resourceType": "host",
-    "reporterData": {
-      "reporterType": "HBI",
-      "reporterInstanceId": "3285c1d1-2bfd-4331-a799-2010ba26f380",
-      "reporterVersion": "1.9.3",
-      "localResourceId": "0fef3011-cfd6-438d-a5e6-68ebff469a91",
-      "apiHref": "https://www.mccarthy-sullivan.com/",
-      "consoleHref": "https://davis.com/",
-      "resourceData": {
-        "satellite_id": "e0102502-dc44-4abe-bda8-c5359ae50bd9",
-        "sub_manager_id": "e77fb2ba-8e91-4b63-b033-5440ca12ca2e",
-        "insights_inventory_id": "00065628-e35c-48f2-a52e-af52e2da5da3",
-        "ansible_host": "must"
+    "reporterType": "HBI",
+    "reporterInstanceId": "25d5735e-3fcd-4214-8639-b21d1f2a4828",
+    "resourceRepresentation": {
+      "representationMetadata": {
+        "localResourceId": "4be0925a-f056-4e79-9274-849c57d7b238",
+        "apiHref": "https://www.holt.org/",
+        "consoleHref": "https://parrish.biz/",
+        "reporterVersion": "2.4.7"
+      },
+      "common": {
+        "workspace_id": "4bdf66a9-9d30-4eea-a155-2fb2821e76b3"
+      },
+      "reporter": {
+        "satellite_id": "41099509-9cb5-48ee-a879-d2e9c99747d0",
+        "sub_manager_id": "8a479a7a-151e-4346-bbbd-7df58c4b2e82",
+        "insights_inventory_id": "0a902cc3-b94a-48e5-8c0d-ad31234f6335",
+        "ansible_host": "improve"
       }
-    },
-    "commonResourceData": {
-      "workspace_id": "c797ae62-4667-4693-b81e-408ca348fdb5"
     }
   }
 }

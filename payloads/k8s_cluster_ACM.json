@@ -1,32 +1,34 @@
 {
   "resource": {
     "resourceType": "k8s_cluster",
-    "reporterData": {
-      "reporterType": "ACM",
-      "reporterInstanceId": "4dcc2c9a-da8f-406d-b92f-c7e400c024a4",
-      "reporterVersion": "0.3.2",
-      "localResourceId": "8292df36-ce36-4a08-b7a4-d525da2b1f1f",
-      "apiHref": "http://torres.com/",
-      "consoleHref": "https://butler.com/",
-      "resourceData": {
-        "external_cluster_id": "c4b6107d-8f21-4707-940c-2b82a9fbbbe3",
-        "cluster_status": "READY",
-        "cluster_reason": "near",
-        "kube_version": "1.5.16",
-        "kube_vendor": "EKS",
-        "vendor_version": "3.3.3",
-        "cloud_platform": "IBMCLOUD_UPI",
+    "reporterType": "ACM",
+    "reporterInstanceId": "245983cc-f746-4b4d-a52c-3f7e67dc34c4",
+    "resourceRepresentation": {
+      "representationMetadata": {
+        "localResourceId": "33327f07-c8f4-4682-99dc-1b4b9acb576b",
+        "apiHref": "https://miller-jones.org/",
+        "consoleHref": "https://www.arroyo-bowers.org/",
+        "reporterVersion": "1.7.13"
+      },
+      "common": {
+        "workspace_id": "06a77a7c-0597-43a4-8267-1b6dabce3d5d"
+      },
+      "reporter": {
+        "external_cluster_id": "03f4225c-c9cd-4aef-8c03-34d321a191d2",
+        "cluster_status": "CLUSTER_STATUS_OTHER",
+        "cluster_reason": "player",
+        "kube_version": "3.1.16",
+        "kube_vendor": "OPENSHIFT",
+        "vendor_version": "3.8.2",
+        "cloud_platform": "NUTANIX_IPI",
         "nodes": [
           {
-            "name": "defense",
-            "cpu": "both",
-            "memory": "safe"
+            "name": "air",
+            "cpu": "able",
+            "memory": "traditional"
           }
         ]
       }
-    },
-    "commonResourceData": {
-      "workspace_id": "3fe5f05d-a8b6-4e28-aa25-00a90c450a04"
     }
   }
 }
