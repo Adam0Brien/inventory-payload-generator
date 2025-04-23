@@ -23,7 +23,7 @@ CLI arguments are used to decide what type of resource you want to generate alon
 "I want a host resource with reporter type HBI and I would like the payload saved to `payloads/host_HBI.json`"
 
 ```py
-python infer_payload.py \
+invgen \
   --resource host \
   --reporter HBI \
   --output payloads/host_HBI.json
@@ -35,7 +35,7 @@ python infer_payload.py \
 
 Help gives the list of cli args aswell as a list of the current valid reporter_type/resource_type combos
 ```py
-python infer_payload.py --help
+invgen --help
 
 ```
 
@@ -55,7 +55,7 @@ python infer_payload.py --help
 
 Generating a hbi host, posting the payload, saving to file
 ```py
-python infer_payload.py \
+invgen \
   --resource host \
   --reporter HBI \
   --post http://localhost:8000/api/inventory/v1beta2/resources \
@@ -92,7 +92,7 @@ Response:
 
 Deleting the hbi host (Ensure `local-resource-id` is the same)
 ```py
-python infer_payload.py \
+invgen \
   --reporter HBI \
   --local-resource-id 6a119e1f-9f3b-4542-be60-c8a2f05275c1 \
   --delete http://localhost:8000/api/inventory/v1beta2/resources --quiet
