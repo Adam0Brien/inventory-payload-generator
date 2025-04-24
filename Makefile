@@ -6,6 +6,8 @@ REPO_DIR=inventory-api
 all: setup
 
 setup:
+	pip install -r requirements.txt
+	pip install -e .
 	@if [ -d "$(REPO_DIR)" ]; then \
 		echo "Repo already cloned."; \
 	else \

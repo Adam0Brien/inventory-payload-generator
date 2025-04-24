@@ -12,9 +12,7 @@ It supports:
 ## Setup
 
 ```bash
-pip install -r requirements.txt
-pip install -e .
-make setup # clones invenotory-api locally
+make setup
 ```
 
 ## Usage
