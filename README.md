@@ -6,13 +6,15 @@ It supports:
 - Inferring values from the OpenAPI + JSON Schema filesystem structure
 - Sending POST and DELETE requests to the inventory-api resource endpoint
 - Saving generated payloads to disk
-- Keeping `inventory-api` up to date locally using `make`
+
+![demo](https://github.com/Adam0Brien/inventory-payload-generator/blob/main/demo.gif)
 
 ## Setup
 
 ```bash
 pip install -r requirements.txt
-make setup
+pip install -e .
+make setup # clones invenotory-api locally
 ```
 
 ## Usage
@@ -20,7 +22,7 @@ make setup
 CLI arguments are used to decide what type of resource you want to generate along with where you want to send it. 
 
 #### Example:
-"I want a host resource with reporter type HBI and I would like the payload saved to `payloads/host_HBI.json`"
+"I want a `host` resource with reporter type `HBI` and I would like the payload saved to `payloads/host_HBI.json`"
 
 ```py
 invgen \
@@ -31,9 +33,6 @@ invgen \
 
 ### CLI arguments
 
-### Help
-
-Help gives the list of cli args aswell as a list of the current valid reporter_type/resource_type combos
 ```py
 invgen --help
 
@@ -66,25 +65,28 @@ Final Payload:
 {
   "resource": {
     "resourceType": "host",
-    "reporterData": {
-      "reporterType": "HBI",
-      "reporterInstanceId": "41c2424b-aad9-4b43-a52c-9abba5e12da3",
-      "reporterVersion": "3.4.18",
-      "localResourceId": "6a119e1f-9f3b-4542-be60-c8a2f05275c1",
-      "apiHref": "https://www.greene.org/",
-      "consoleHref": "https://thomas.com/",
-      "resourceData": {
-        "satellite_id": "231755a4-1ae9-419e-905b-d3a73138a42f",
-        "sub_manager_id": "33ce6023-164f-41c7-81a8-0906272e9efe",
-        "insights_inventory_id": "4e3f4b71-f764-423e-8aed-19ad10967824",
-        "ansible_host": "agreement"
+    "reporterType": "HBI",
+    "reporterInstanceId": "776225b7-c857-4690-ae22-d6e66bbab519",
+    "resourceRepresentation": {
+      "representationMetadata": {
+        "localResourceId": "4fcc4047-7133-4ac9-9405-9064496ad9c2",
+        "apiHref": "http://morris.com/",
+        "consoleHref": "http://matthews.info/",
+        "reporterVersion": "1.0.6"
+      },
+      "common": {
+        "workspace_id": "44aab1e1-c323-4d7c-88e0-79ac4d468ff6"
+      },
+      "reporter": {
+        "satellite_id": "c7c73f12-7dd6-41ce-a7ed-1158e06b652a",
+        "sub_manager_id": "1a159006-d2dc-4604-95fd-d727d0d16e5c",
+        "insights_inventory_id": "4296814e-d050-4cc5-a9e6-5f71360c3569",
+        "ansible_host": "police"
       }
-    },
-    "commonResourceData": {
-      "workspace_id": "4e7bd344-ddff-47ca-be98-f0634f22fd81"
     }
   }
 }
+
 Status: 200
 Response:
 {}
@@ -94,17 +96,23 @@ Deleting the hbi host (Ensure `local-resource-id` is the same)
 ```py
 invgen \
   --reporter HBI \
-  --local-resource-id 6a119e1f-9f3b-4542-be60-c8a2f05275c1 \
+  --local-resource-id 4fcc4047-7133-4ac9-9405-9064496ad9c2 \
   --delete http://localhost:8000/api/inventory/v1beta2/resources --quiet
 
 Logging disabled via --quiet
 Final Payload:
 {
-  "localResourceId": "6a119e1f-9f3b-4542-be60-c8a2f05275c1",
+  "localResourceId": "4fcc4047-7133-4ac9-9405-9064496ad9c2",
   "reporterType": "HBI"
 }
 Status: 200
 Response:
 {}
 
+```
+
+# Note
+If the cli does not work run with python
+```sh
+python main.py --resource host --reporter HBI --output HBI_host.json
 ```
