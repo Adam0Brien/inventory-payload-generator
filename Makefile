@@ -1,5 +1,6 @@
 REPO_URL=https://github.com/project-kessel/inventory-api.git
 REPO_DIR=inventory-api
+BRANCH_NAME=main # <-- you can change this!
 
 .PHONY: all setup clean
 
@@ -12,7 +13,7 @@ setup:
 		echo "Repo already cloned."; \
 	else \
 		echo "Cloning inventory-api..."; \
-		git clone $(REPO_URL) $(REPO_DIR); \
+		git clone --branch $(BRANCH_NAME) $(REPO_URL) $(REPO_DIR); \
 	fi
 
 update:
