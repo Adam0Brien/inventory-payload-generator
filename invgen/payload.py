@@ -13,7 +13,7 @@ def generate_value(schema, path=None):
 
     if schema.get("type") == "string":
         key = path[-1].lower() if path else ""
-        if key == "resourcetype":
+        if key == "type":
             return RESOURCE_TYPE
         elif key == "reportertype":
             return REPORTER_TYPE
