@@ -94,7 +94,7 @@ def generate_openapi_object(openapi_schema, path):
 
         # Special-case: switch to JSON schema
         if new_path == ["resource", "representations", "reporter"]: # Change paths when json schema moves, or new json schema is added
-            log(f"Generating JSON schema for reporterData.resourceData at {'.'.join(new_path)}")
+            log(f"Generating JSON schema for reporterRepresentation at {'.'.join(new_path)}")
             obj[k] = generate_from_json_schema(reporter_schema, new_path)
             continue
 
