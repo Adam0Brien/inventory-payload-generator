@@ -99,7 +99,7 @@ def generate_openapi_object(openapi_schema, path):
             continue
 
         if new_path == ["resource","representations", "common"]:  # Change paths when json schema moves, or new json schema is added
-            log(f"Generating JSON schema for commonResourceData at {'.'.join(new_path)}")
+            log(f"Generating JSON schema for commonRepresentation at {'.'.join(new_path)}")
             obj[k] = generate_from_json_schema(common_schema, new_path)
             continue
 

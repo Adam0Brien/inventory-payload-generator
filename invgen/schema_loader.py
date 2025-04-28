@@ -19,7 +19,7 @@ def load_json_schema_from_url(resource, reporter=None, ):
     if reporter:
         url = f"{SCHEMA_BASE_URL}/{resource}/reporters/{reporter.lower()}/{resource}.json"
     else:
-        url = f"{SCHEMA_BASE_URL}/{resource}/common_resource_data.json"
+        url = f"{SCHEMA_BASE_URL}/{resource}/common_representation.json"
 
     response = requests.get(url)
     response.raise_for_status()
@@ -54,7 +54,7 @@ def get_resource_reporter_schemas(resource_type, reporter_type, remote=REMOTE):
         reporter_path = resource_path / "reporters" / reporter_type.lower()
 
         log(f"Getting schemas for resource '{resource_type}' and reporter '{reporter_type}'...")
-        common = load_json_schema(resource_path / "common_resource_data.json", remote=False)
+        common = load_json_schema(resource_path / "common_representation.json", remote=False)
         reporter = load_json_schema(reporter_path / f"{resource_type}.json", remote=False)
 
     return common, reporter
