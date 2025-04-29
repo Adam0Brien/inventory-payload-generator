@@ -3,6 +3,7 @@ import json
 from .schema_loader import load_openapi_spec
 from .payload import generate_report_resource_payload
 from .utils import *
+import os
 
 LOGGING_ENABLED = True
 INVENTORY_ID = None
@@ -59,6 +60,7 @@ def main():
         send_request(args.post, payload)
 
     if args.output:
+        os.makedirs(os.path.dirname(args.output), exist_ok=True)
         with open(args.output, "w") as f:
             json.dump(payload, f, indent=2)
         log(f"Wrote payload to {args.output}")
