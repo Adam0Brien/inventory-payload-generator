@@ -1,6 +1,6 @@
-REPO_URL=https://github.com/Adam0Brien/inventory-api.git
+REPO_URL=https://github.com/project-kessel/inventory-api.git
 REPO_DIR=inventory-api
-BRANCH_NAME=RHCLOUD-39537 # <-- you can change this!
+BRANCH_NAME=main # <-- you can change this!
 
 .PHONY: all setup clean
 

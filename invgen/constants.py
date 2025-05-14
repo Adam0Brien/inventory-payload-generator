@@ -10,8 +10,6 @@ REPO_PATH = BASE_DIR / "inventory-api"
 SCHEMA_DIR = REPO_PATH / "data" / "schema" / "resources"
 OPENAPI_PATH = REPO_PATH / "openapi.yaml"
 
-SCHEMA_DIR = REPO_PATH / "data" / "schema" / "resources"
-OPENAPI_PATH = REPO_PATH / "openapi.yaml"
 
 ## TODO get remote working properly
 REMOTE = False
